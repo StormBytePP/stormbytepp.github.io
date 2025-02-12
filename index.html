@@ -1,10 +1,167 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Test</title>
-    </head>
-    <body>
-        <p>Hello World!</p>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Carlos Manuelda - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <nav>
+        <div class="navbar">
+            <button class="toggle-button">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li class="dropdown">
+                    <a href="#github-projects" class="dropbtn">GitHub Projects</a>
+                    <div class="dropdown-content">
+                        <a href="https://dev.stormbyte.org/StormByte" target="_blank">StormByte C++ Library</a>
+                        <!-- <a href="#">Project 2</a> -->
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="hover-effect">
+            <img src="dcm-photo.png" alt="David Carlos Manuelda" class="profile-photo">
+            <h1 class="name typewriter">David Carlos Manuelda</h1>
+            <p class="birth-date">Born: April 23, 1984 (Age: <span id="age"></span>)</p>
+        </header>
+        <section id="about" class="about hover-effect">
+            <h2>About Me</h2>
+            <div class="description">
+				<p>I am a senior programmer with a passion for modern C++ and system programming. With extensive experience in writing clean, efficient, and cross-platform code, I strive to create high-performance software that runs seamlessly on both Windows and Linux. My commitment to code quality and reusability is evident in my well-organized and consistently formatted code. I am skilled in advanced C++ programming, system programming, memory management, and exception handling.</p>
+				<p>In addition to C++, I am proficient in multiple programming languages and continually expand my skill set by learning new languages in my free time. As an advocate for open-source development, I enjoy contributing to the community and collaborating with other developers to create innovative solutions. I thrive on challenges and am dedicated to optimizing code to achieve the highest performance standards.</p>
+			</div>
+        </section>
+        <section id="skills" class="skills hover-effect">
+            <h2 class="full-width">Skills</h2>
+            
+            <h3>Programming Languages</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>C++</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Java</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>PHP</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+					<td>C++</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Java</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>PHP</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                </tr>
+                <tr>
+                    <td>Go</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+                    <td>C</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+                    <td>C#</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+					<td>Go</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+                    <td>C</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+                    <td>C#</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+                </tr>
+                <tr>
+                    <td>Ruby</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                    <td>Python</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>L</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="60%"></div></div></td>
+					<td>Ruby</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                    <td>Python</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>L</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="60%"></div></div></td>
+                </tr>
+            </table>
+            
+            <h3>Frameworks</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>React</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+                    <td>Angular</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                    <td>Django</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+					<td>React</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="75%"></div></div></td>
+                    <td>Angular</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                    <td>Django</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
+                </tr>
+            </table>
 
+            <h3>Tools</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>Git</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Docker</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>Jenkins</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+					<td>Git</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Docker</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                    <td>Jenkins</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+                </tr>
+            </table>
+
+            <h3>Server Management</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>Linux</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Windows Server</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+                    <td>Apache</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+					<td>Linux</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
+                    <td>Windows Server</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="80%"></div></div></td>
+                    <td>Apache</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
+                </tr>
+            </table>
+        </section>
+        <section id="education" class="education hover-effect">
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor's Degree in Computer Science, University XYZ</li>
+                <li>Master's Degree in Software Engineering, University ABC</li>
+            </ul>
+        </section>
+        <section id="experience" class="experience hover-effect">
+            <h2>Experience</h2>
+            <ul>
+                <li>Senior Developer at Company 1 (2015 - Present)</li>
+                <li>Software Engineer at Company 2 (2010 - 2015)</li>
+                <li>Junior Developer at Company 3 (2005 - 2010)</li>
+            </ul>
+        </section>
+        <section id="github-projects" class="github-projects hover-effect">
+            <h2>GitHub Projects</h2>
+            <div class="project">
+                <h3>StormByte C++ Library</h3>
+                <p>StormByte is a comprehensive, cross-platform C++ library aimed at easing system programming, configuration management, logging, and database handling tasks. This library provides a unified API that abstracts away the complexities and inconsistencies of different platforms (Windows, Linux).</p>
+                <p><strong>Tech Stack:</strong> C++</p>
+                <a href="https://dev.stormbyte.org/StormByte" target="_blank">View Project</a>
+            </div>
+            <!--<div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+                <p><strong>Tech Stack:</strong> Python, Django</p>
+                <a href="#">View Project</a>
+            </div>-->
+        </section>
+        <section id="contact" class="contact hover-effect">
+            <h2>Contact</h2>
+            <p>Email: stormbyte@gmail.com</p>
+            <p>Phone: +34 611 95 34 54</p>
+        </section>
+        <section id="gpg-key" class="gpg-key hover-effect">
+            <a href="StormByte.asc" download>
+                <h2>GPG Key</h2>
+                <p>Download my GPG key to send encrypted data or check my signatures</p>
+            </a>
+        </section>
+    </div>
+    <footer>
+        <p>© 2023 David Carlos Manuelda. All rights reserved.</p>
+        <p>
+            <a href="https://www.linkedin.com/in/stormbyte/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/StormBytePP/" target="_blank">GitHub</a> |
+			<a href="https://blog.stormbyte.org/" target="_blank">Blog</a>
+        </p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
