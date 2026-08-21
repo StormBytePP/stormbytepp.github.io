@@ -1,0 +1,195 @@
+.skill-circuit-wrap {
+	position: relative;
+	flex: 1;
+	border: 1px solid rgba(0, 255, 0, 0.28);
+	border-radius: 10px;
+	background:
+		radial-gradient(ellipse at 50% 50%, rgba(0, 40, 20, 0.4), transparent 55%),
+		repeating-linear-gradient(0deg, transparent, transparent 11px, rgba(0, 255, 0, 0.015) 11px, rgba(0, 255, 0, 0.015) 12px),
+		repeating-linear-gradient(90deg, transparent, transparent 11px, rgba(0, 255, 0, 0.015) 11px, rgba(0, 255, 0, 0.015) 12px),
+		rgba(0, 0, 0, 0.55);
+	padding: 0.35rem;
+	overflow: hidden;
+	min-height: 300px;
+	transition: opacity 0.4s ease;
+}
+
+.skill-circuit-wrap.circuit-off {
+	opacity: 0.1;
+}
+
+.skill-circuit-svg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.circuit-trace {
+	fill: none;
+	stroke: rgba(0, 220, 180, 0.48);
+	stroke-width: 1.15;
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+}
+
+.circuit-packet {
+	fill: #b8ffb8;
+	filter: drop-shadow(0 0 2px #00ff88);
+}
+
+.skill-chips {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	min-height: 280px;
+}
+
+.skill-chip {
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.08rem;
+	width: 92px;
+	min-height: 50px;
+	padding: 0.35rem 0.28rem;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 255, 0, 0.55);
+	background: linear-gradient(160deg, rgba(0, 28, 12, 0.98), rgba(0, 0, 0, 0.94));
+	box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.07), 0 0 8px rgba(0, 255, 0, 0.12);
+	color: #00ff00;
+	text-align: center;
+	cursor: pointer;
+	transition: border-color 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+}
+
+.skill-chip:hover {
+	border-color: #00ced1;
+	filter: brightness(1.08);
+}
+
+.skill-chip.chip-hot {
+	border-color: rgba(120, 255, 180, 0.9);
+	box-shadow: inset 0 0 14px rgba(0, 255, 140, 0.2), 0 0 14px rgba(0, 255, 120, 0.35);
+}
+
+.skill-chip.chip-hub {
+	width: 108px;
+	min-height: 58px;
+	border-color: rgba(0, 230, 200, 0.75);
+	z-index: 2;
+	box-shadow: inset 0 0 14px rgba(0, 255, 200, 0.12), 0 0 14px rgba(0, 200, 180, 0.25);
+}
+
+.skill-chip .chip-icon {
+	font-size: 0.85rem;
+	line-height: 1;
+	opacity: 0.92;
+}
+
+.skill-chip .chip-label {
+	font-family: "Orbitron", Courier, monospace;
+	font-size: 0.58rem;
+	letter-spacing: 0.02em;
+	word-break: break-word;
+}
+
+.skill-chip .chip-pins {
+	position: absolute;
+	display: flex;
+	pointer-events: none;
+}
+
+.skill-chip .chip-pins-left,
+.skill-chip .chip-pins-right {
+	top: 50%;
+	transform: translateY(-50%);
+	flex-direction: column;
+	gap: 2.5px;
+}
+
+.skill-chip .chip-pins-left {
+	left: -3px;
+}
+
+.skill-chip .chip-pins-right {
+	right: -3px;
+}
+
+.skill-chip .chip-pins-top,
+.skill-chip .chip-pins-bottom {
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: row;
+	gap: 2.5px;
+}
+
+.skill-chip .chip-pins-top {
+	top: -3px;
+}
+
+.skill-chip .chip-pins-bottom {
+	bottom: -3px;
+}
+
+.skill-chip .pin {
+	background: #00e8a0;
+	box-shadow: 0 0 3px rgba(0, 255, 150, 0.5);
+	border-radius: 1px;
+}
+
+.skill-chip .chip-pins-left .pin,
+.skill-chip .chip-pins-right .pin {
+	width: 4px;
+	height: 2px;
+}
+
+.skill-chip .chip-pins-top .pin,
+.skill-chip .chip-pins-bottom .pin {
+	width: 2px;
+	height: 4px;
+}
+
+.skill-chip.chip-secondary-hub {
+	border-color: rgba(0, 220, 180, 0.7);
+	box-shadow: inset 0 0 12px rgba(0, 255, 200, 0.1), 0 0 12px rgba(0, 200, 160, 0.22);
+}
+
+@media (max-width: 900px) {
+	.skill-circuit-wrap {
+		min-height: 320px;
+	}
+
+	.skill-chips {
+		min-height: 300px;
+	}
+}
+
+@media (max-width: 520px) {
+	.skill-chip {
+		width: 78px;
+		min-height: 46px;
+	}
+
+	.skill-chip.chip-hub {
+		width: 90px;
+	}
+
+	.skill-chip .chip-label {
+		font-size: 0.5rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.circuit-packet {
+		display: none;
+	}
+}

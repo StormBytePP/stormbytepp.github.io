@@ -1,0 +1,103 @@
+.skill-radar-wrap {
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+	align-self: center;
+	transition: opacity 0.4s ease;
+	cursor: crosshair;
+}
+
+.skill-radar-wrap.radar-off {
+	opacity: 0.1;
+}
+
+#skill-radar {
+	width: 100%;
+	height: auto;
+	display: block;
+	overflow: visible;
+}
+
+#radar-area {
+	fill: rgba(0, 255, 0, 0.14);
+	stroke: #00ced1;
+	stroke-width: 2;
+}
+
+.radar-ring {
+	fill: none;
+	stroke: rgba(0, 255, 0, 0.16);
+	stroke-width: 1;
+}
+
+.radar-axis {
+	stroke: rgba(0, 255, 0, 0.22);
+	stroke-width: 1;
+}
+
+.radar-label {
+	fill: #00ff00;
+	font-family: "Orbitron", Courier, monospace;
+	font-size: 10px;
+	text-anchor: middle;
+	dominant-baseline: middle;
+}
+
+.radar-dot {
+	fill: #00ced1;
+	opacity: 0.5;
+	transition: opacity 0.06s linear, fill 0.06s linear;
+}
+
+.radar-dot.radar-dot-lit {
+	fill: #e0fff0;
+	opacity: 1;
+	filter: drop-shadow(0 0 6px #00ff99);
+}
+
+#radar-snow {
+	opacity: 0;
+	pointer-events: none;
+}
+
+#radar-hex-jitter {
+	filter: url(#radar-interfere);
+}
+
+#radar-sweep-layer {
+	pointer-events: none;
+	filter: none;
+}
+
+.radar-sweep {
+	filter: drop-shadow(0 0 6px currentColor);
+}
+
+.radar-sweep-glow {
+	filter: blur(1px);
+}
+
+@media (max-width: 900px) {
+	.skill-radar-wrap {
+		max-width: 280px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#radar-sweep-layer {
+		display: none;
+	}
+
+	.radar-dot {
+		opacity: 0.9;
+	}
+
+	#radar-snow {
+		opacity: 0 !important;
+	}
+
+	#radar-hex-jitter {
+		filter: none;
+	}
+}

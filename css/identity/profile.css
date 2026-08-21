@@ -1,0 +1,108 @@
+.identity {
+	margin-bottom: 1.75rem;
+	padding: 0.5rem 0.35rem 0.85rem;
+}
+
+.identity-top {
+	text-align: center;
+	padding: 0.5rem 0.5rem 0.85rem;
+}
+
+.profile-photo {
+	display: block;
+	width: 140px;
+	height: 140px;
+	margin: 0 auto 0.75rem;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid rgba(0, 255, 0, 0.55);
+	box-shadow: 0 0 20px rgba(0, 255, 0, 0.28);
+	opacity: 0;
+	animation: fadeIn 2.2s ease forwards;
+	animation-delay: 0.3s;
+	cursor: pointer;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-photo:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 28px rgba(0, 255, 0, 0.45);
+}
+
+.name {
+	font-family: "Orbitron", Courier, monospace;
+	font-size: clamp(1.4rem, 4vw, 2.25rem);
+	margin: 0 0 0.3rem;
+	color: #00ff00;
+	text-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
+}
+
+.tagline {
+	margin: 0.15rem 0 0.4rem;
+	color: #8fbf8f;
+	font-size: 0.98rem;
+}
+
+.birth-date {
+	font-family: "Orbitron", Courier, monospace;
+	font-size: 0.85rem;
+	color: #666;
+	margin: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.typewriter {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 0.12em solid #00ff00;
+	max-width: 100%;
+}
+
+.identity-bottom {
+	display: grid;
+	grid-template-columns: minmax(200px, 300px) 1fr;
+	gap: 1rem 1.25rem;
+	align-items: stretch;
+}
+
+.pcb-scope-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+	min-width: 0;
+}
+
+@media (max-width: 900px) {
+	.identity-bottom {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 520px) {
+	.profile-photo {
+		width: 110px;
+		height: 110px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.profile-photo {
+		opacity: 1;
+		animation: none;
+	}
+
+	.typewriter {
+		border-right: none;
+	}
+}

@@ -1,0 +1,103 @@
+.sys-terminal {
+	position: fixed;
+	inset: 0;
+	z-index: 60;
+	background: rgba(0, 0, 0, 0.78);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.sys-terminal[hidden] {
+	display: none !important;
+}
+
+.sys-terminal.mode-panic {
+	background: rgba(20, 0, 0, 0.55);
+}
+
+.sys-terminal-inner {
+	width: min(40rem, 100%);
+	max-height: min(70vh, 32rem);
+	display: flex;
+	flex-direction: column;
+	background: #020802;
+	border: 1px solid #00ff66;
+	border-radius: 10px;
+	padding: 0.75rem 0.9rem 0.85rem;
+	box-shadow: 0 0 28px rgba(0, 255, 0, 0.22);
+	font-family: "Share Tech Mono", "Courier New", monospace;
+	color: #00ff66;
+}
+
+.sys-terminal.mode-panic .sys-terminal-inner {
+	border-color: #ff3344;
+	box-shadow: 0 0 28px rgba(255, 0, 40, 0.35);
+	color: #ff8a8a;
+}
+
+.sys-terminal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	font-size: 0.8rem;
+	color: #00ced1;
+}
+
+.sys-terminal.mode-panic .sys-terminal-header {
+	color: #ff6670;
+}
+
+.sys-terminal-close {
+	background: none;
+	border: none;
+	color: inherit;
+	font-size: 1.25rem;
+	cursor: pointer;
+	line-height: 1;
+	padding: 0 0.25rem;
+}
+
+.sys-terminal.mode-panic .sys-terminal-close,
+.sys-terminal.mode-boot .sys-terminal-close {
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.sys-terminal-log {
+	flex: 1;
+	margin: 0;
+	overflow: auto;
+	white-space: pre-wrap;
+	word-break: break-word;
+	font-size: 0.78rem;
+	line-height: 1.4;
+	min-height: 8rem;
+}
+
+.sys-terminal-input-row {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-top: 0.55rem;
+	border-top: 1px solid rgba(0, 255, 0, 0.15);
+	padding-top: 0.45rem;
+}
+
+.sys-prompt {
+	color: #00ced1;
+	font-size: 0.78rem;
+	white-space: nowrap;
+}
+
+.sys-terminal-input {
+	flex: 1;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #00ff88;
+	font-family: inherit;
+	font-size: 0.78rem;
+}

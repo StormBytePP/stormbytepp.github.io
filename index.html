@@ -1,166 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Carlos Manuelda - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="David Carlos Manuelda (StormByte) — senior C++ and systems developer.">
+	<meta property="og:title" content="David Carlos Manuelda — StormByte">
+	<meta property="og:description" content="Senior systems & C++ developer. Libraries, Gentoo tooling, Build Master, StageManager.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://dev.stormbyte.org/">
+	<meta property="og:image" content="https://dev.stormbyte.org/dcm-photo.png">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="David Carlos Manuelda — StormByte">
+	<meta name="twitter:description" content="Senior systems & C++ developer. C++23, Gentoo, build systems.">
+	<title>David Carlos Manuelda — Portfolio</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/terminal.css">
+	<link rel="stylesheet" href="css/identity/profile.css">
+	<link rel="stylesheet" href="css/identity/bcd.css">
+	<link rel="stylesheet" href="css/identity/radar.css">
+	<link rel="stylesheet" href="css/identity/circuit.css">
+	<link rel="stylesheet" href="css/identity/scope.css">
+	<link rel="stylesheet" href="css/content.css">
 	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <canvas id="matrix"></canvas>
-    <nav>
-        <div class="navbar">
-            <button class="toggle-button">
-                ☰
-            </button>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li class="dropdown">
-                    <a href="#github-projects" class="dropbtn">GitHub Projects</a>
-                    <div class="dropdown-content">
-                        <a href="https://dev.stormbyte.org/StormByte" target="_blank">StormByte C++ Suite</a>
-						<a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank">CMake Build Master</a>
-                        <a href="https://dev.stormbyte.org/xHTML-o-MATIC" target="_blank">xHTML-o-MATIC</a>
-                        <a href="https://dev.stormbyte.org/StormCache" target="_blank">StormCache</a>
-                        <a href="https://dev.stormbyte.org/PostgreSQLDBC" target="_blank">PostgreSQLDBC</a>
-                        <!-- <a href="#">Project 2</a> -->
-                    </div>
-                </li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <header class="hover-effect">
-            <img src="dcm-photo.png" alt="David Carlos Manuelda" class="profile-photo">
-            <h1 class="name typewriter">David Carlos Manuelda</h1>
-            <p class="birth-date">Born: April 23, 1984 (Age: <span id="age"></span>)</p>
-        </header>
-        <section id="about" class="about hover-effect">
-            <h2>About Me</h2>
-            <div class="description">
-				<p>I am a senior programmer with a passion for modern C++ and system programming. With extensive experience in writing clean, efficient, and cross-platform code, I strive to create high-performance software that runs seamlessly on both Windows and Linux. My commitment to code quality and reusability is evident in my well-organized and consistently formatted code. I am skilled in advanced C++ programming, system programming, memory management, and exception handling.</p>
-				<p>In addition to C++, I am proficient in multiple programming languages and continually expand my skill set by learning new languages in my free time. As an advocate for open-source development, I enjoy contributing to the community and collaborating with other developers to create innovative solutions. I thrive on challenges and am dedicated to optimizing code to achieve the highest performance standards.</p>
+	<canvas id="matrix" aria-hidden="true"></canvas>
+	<button type="button" id="matrix-toggle" class="matrix-toggle" title="Toggle matrix rain" aria-pressed="true">Matrix: on</button>
+
+	<nav>
+		<div class="navbar">
+			<button type="button" class="toggle-button" aria-label="Open menu" aria-expanded="false">☰</button>
+			<ul class="nav-links">
+				<li><a href="#identity">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#github-projects">Projects</a></li>
+				<li><a href="#education">Education</a></li>
+				<li class="dropdown">
+					<a href="#github-projects" class="dropbtn">Docs ▾</a>
+					<div class="dropdown-content">
+						<a href="https://dev.stormbyte.org/StormByte" target="_blank" rel="noopener">StormByte C++</a>
+						<a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank" rel="noopener">Build Master</a>
+						<a href="https://github.com/StormBytePP/StormByte-StageManager" target="_blank" rel="noopener">StageManager</a>
+						<a href="https://github.com/StormBytePP/StormByte-GitHub" target="_blank" rel="noopener">StormByte-GitHub</a>
+						<a href="https://dev.stormbyte.org/xHTML-o-MATIC" target="_blank" rel="noopener">xHTML-o-MATIC</a>
+						<a href="https://dev.stormbyte.org/StormCache" target="_blank" rel="noopener">StormCache</a>
+						<a href="https://dev.stormbyte.org/PostgreSQLDBC" target="_blank" rel="noopener">PostgreSQLDBC</a>
+					</div>
+				</li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<main class="container">
+		<section id="identity" class="identity" aria-label="Identity">
+			<div class="identity-top">
+				<img src="dcm-photo.png" alt="David Carlos Manuelda" class="profile-photo" id="profile-photo" width="150" height="150">
+				<h1 class="name typewriter">David Carlos Manuelda</h1>
+				<p class="tagline">Senior systems &amp; C++ developer · StormByte</p>
+				<p class="birth-date">Born: April 23, 1984 (Age: <span id="age"></span>)</p>
 			</div>
-        </section>
-        <section id="skills" class="skills hover-effect">
-            <h2 class="full-width">Skills</h2>
-            
-            <h3>Programming Languages</h3>
-            <table class="skills-table">
-                <tr>
-                    <td>C/C++</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
-                    <td>Smalltalk</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="70%"></div></div></td>
-                    <td>PHP</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
-					<td>PL/PGSQL</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
-                    <td>Java</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="50%"></div></div></td>
-                    <td>Elixir</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="95%"></div></div></td>
-                </tr>
-            </table>
 
-            <h3>Tools</h3>
-            <table class="skills-table">
-                <tr>
-                    <td>Git</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="90%"></div></div></td>
-                    <td>Docker</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
-                    <td>GitHub</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-					<td>Subversion</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="40%"></div></div></td>
-                    <td>RabbitMQ</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
-                    <td>Bash</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-                </tr>
-            </table>
+			<div class="bcd-with-panic">
+				<div class="bcd-panel" id="bcd-panel" role="group" aria-label="Status display">
+					<div class="bcd-row bcd-cpu">
+						<span class="bcd-label">OPCODE</span>
+						<div class="bcd-digits" id="bcd-opcode" title="Click to tick"></div>
+						<span class="bcd-label bcd-label-inline">ADDR</span>
+						<div class="bcd-digits" id="bcd-addr" title="Click to tick"></div>
+					</div>
+					<div class="bcd-row bcd-data">
+						<span class="bcd-label">DATA</span>
+						<div class="bcd-digits" id="bcd-data" title="Click to advance"></div>
+					</div>
+				</div>
+				<div class="panic-cluster">
+					<div class="link-led" id="link-led" title="LINK" aria-hidden="true">
+						<span class="link-led-dot"></span>
+						<span class="link-led-label">LINK</span>
+					</div>
+					<button type="button" id="panic-btn" class="panic-btn" aria-label="Trigger system panic and reboot">PANIC</button>
+				</div>
+			</div>
 
-            <h3>Server Management</h3>
-            <table class="skills-table">
-                <tr>
-                    <td>Linux</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-                    <td>Gentoo</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-                    <td>Apache</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
-					<td>Nginx</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-                    <td>PostgreSQL</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="100%"></div></div></td>
-                    <td>MySQL</td><td><div class="skill-bar-wrapper"><div class="skill-bar" data-width="85%"></div></div></td>
-                </tr>
-            </table>
-        </section>
-        <section id="education" class="education hover-effect">
-            <h2>Education</h2>
-            <ul>
-                <li>Computer Science Engineering, Universidad de Alicante</li>
-                <li>Proficiency in self learning new languages/techniques</li>
-            </ul>
-        </section>
-        <section id="experience" class="experience hover-effect">
-            <h2>Experience</h2>
-            <ul>
-                <li>IT Manager for infrastructure setup and software maintenance</li>
-                <li>Senior Developer, System and server infrastructure administrator at Zenlima (2010 - Present)</li>
-            </ul>
-        </section>
-        <section id="github-projects" class="github-projects hover-effect">
-            <h2>GitHub Projects</h2>
-            <div class="project">
-                <h3>StormByte C++ Suite</h3>
-                <p>StormByte is a comprehensive, cross-platform C++ library aimed at easing system programming, configuration management, logging, multimedia and database handling tasks. This library provides a unified API that abstracts away the complexities and inconsistencies of different platforms (Windows, Linux).</p>
-                <p><strong>Tech Stack:</strong> C++</p>
-                <a href="https://dev.stormbyte.org/StormByte" target="_blank">View Project</a>
-            </div>
+			<div class="identity-bottom">
+				<div class="skill-radar-wrap" id="skill-radar-wrap">
+					<svg id="skill-radar" viewBox="0 0 320 300" role="img" aria-label="Skill radar chart">
+						<defs>
+							<filter id="radar-glow" x="-50%" y="-50%" width="200%" height="200%">
+								<feGaussianBlur stdDeviation="2.5" result="b"/>
+								<feMerge>
+									<feMergeNode in="b"/>
+									<feMergeNode in="SourceGraphic"/>
+								</feMerge>
+							</filter>
+						</defs>
+						<g id="radar-grid"></g>
+						<polygon id="radar-area" filter="url(#radar-glow)"></polygon>
+						<g id="radar-labels"></g>
+					</svg>
+				</div>
+				<div class="pcb-scope-wrap">
+					<div class="skill-circuit-wrap" id="skill-circuit-wrap">
+						<svg id="skill-circuit" class="skill-circuit-svg" aria-hidden="true"></svg>
+						<div class="skill-chips" id="skill-chips"></div>
+					</div>
+					<div class="scope-panel" id="scope-panel" aria-hidden="true">
+						<svg id="scope-svg" viewBox="0 0 200 64" preserveAspectRatio="none">
+							<polyline id="scope-wave" class="scope-wave" fill="none"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about hover-effect">
+			<h2>About Me</h2>
+			<div class="description">
+				<p>
+					I build <strong>cross-platform C++23 libraries</strong> and the tooling around them:
+					reproducible builds, Gentoo stage workflows, and CLIs that connect GitHub, CI caches, and local development.
+					Deep in Linux—especially <strong>Gentoo</strong>—packaging, and making complex dependency graphs compile on Windows as well.
+				</p>
+				<p>
+					Day job: senior development and infrastructure at <strong>Zenlima</strong> (since 2010).
+					Off hours: open source under the StormByte umbrella—libraries, CMake DSLs, and ops scripts meant for real use.
+				</p>
+			</div>
+		</section>
+
+		<section id="experience" class="experience hover-effect">
+			<h2>Experience</h2>
+			<article class="job">
+				<h3>Senior Developer &amp; Infrastructure · Zenlima <span class="job-date">2010 – Present</span></h3>
+				<ul>
+					<li>System and server infrastructure alongside product development.</li>
+					<li>Long-running delivery of services with Linux, databases, and messaging in production.</li>
+					<li>Bridge between application code and ops: packaging, automation, reliability.</li>
+				</ul>
+			</article>
+			<article class="job">
+				<h3>Open source · StormByte <span class="job-date">Ongoing</span></h3>
+				<ul>
+					<li>C++23 modular suite (buffer, config, crypto, database, logger, multimedia, …).</li>
+					<li>CMake Build Master DSL for static/plugin toolchains and external project graphs.</li>
+					<li>Gentoo StageManager and StormByte-GitHub CLIs: chroots, shared compiler caches, CI helpers.</li>
+				</ul>
+			</article>
+		</section>
+
+		<section id="github-projects" class="github-projects hover-effect">
+			<h2>Selected projects</h2>
 			<div class="project">
-                <h3>StormByte Build Master</h3>
-                <p>StormByte Build Master is a CMake DSL for integrating, configuring, and orchestrating external projects, tools and dependencies.</p>
-                <p><strong>Tech Stack:</strong> CMake</p>
-                <a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>xHTML-o-MATIC</h3>
-                <p>A mini framework for handling PHP web frontends.</p>
-                <p><strong>Tech Stack:</strong> PHP</p>
-                <a href="https://dev.stormbyte.org/xHTML-o-MATIC" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>StormCache</h3>
-                <p>An advanced library to extend and handle PECL-Memcached.</p>
-                <p><strong>Tech Stack:</strong> PHP</p>
-                <a href="https://dev.stormbyte.org/StormCache" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>PostgreSQLDBC</h3>
-                <p>A PHP library for managing PostgreSQL database connections with prepared statements.</p>
-                <p><strong>Tech Stack:</strong> PHP</p>
-                <a href="https://dev.stormbyte.org/PostgreSQLDBC" target="_blank">View Project</a>
-            </div>
-            <!--<div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2</p>
-                <p><strong>Tech Stack:</strong> Python, Django</p>
-                <a href="#">View Project</a>
-            </div>-->
-        </section>
-        <section id="contact" class="contact hover-effect">
-            <h2>Contact</h2>
-            <p>Email: stormbyte@gmail.com</p>
-            <p>Phone: +34 611 95 34 54</p>
-        </section>
-        <section id="gpg-key" class="gpg-key hover-effect">
-            <a href="StormByte.asc" download>
-                <h2>GPG Key</h2>
-                <p>Download my GPG key to send encrypted data or check my signatures</p>
-            </a>
-        </section>
-    </div>
-    <footer>
-        <p>© 2023 David Carlos Manuelda. All rights reserved.</p>
-        <p>
-            <a href="https://www.linkedin.com/in/stormbyte/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/StormBytePP/" target="_blank">GitHub</a> |
-			<a href="https://blog.stormbyte.org/" target="_blank">Blog</a>
-        </p>
-    </footer>
-    <script src="scripts.js"></script>
+				<h3>StormByte C++ Suite</h3>
+				<p>Cross-platform C++23 libraries for systems work: buffers and pipelines, config, crypto, multi-backend database, logging, multimedia foundations.</p>
+				<p class="tech"><span class="chip">C++23</span><span class="chip">CMake</span><span class="chip">LGPL</span></p>
+				<p class="project-links">
+					<a href="https://dev.stormbyte.org/StormByte" target="_blank" rel="noopener">Documentation</a> ·
+					<a href="https://github.com/StormBytePP/StormByte" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte Build Master</h3>
+				<p>CMake DSL to configure, build, install and wire external projects (including Meson-backed deps), with fail-fast orchestration and cached downloads.</p>
+				<p class="tech"><span class="chip">CMake</span><span class="chip">Ninja</span><span class="chip">Meson</span></p>
+				<p class="project-links">
+					<a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank" rel="noopener">Documentation</a> ·
+					<a href="https://github.com/StormBytePP/StormByte-BuildMaster" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte-StageManager</h3>
+				<p>Gentoo stage tarball manager: extract, zram/tmpfs, bind mounts, chroot, optional save; shared ccache/sccache FILE workspaces with last-session pack.</p>
+				<p class="tech"><span class="chip">Bash</span><span class="chip">Gentoo</span><span class="chip">zram</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte-StageManager" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte-GitHub</h3>
+				<p>Unified CLI for GitHub Actions caches, CI runs, git/submodule workflows, repo dumps and releases.</p>
+				<p class="tech"><span class="chip">Bash</span><span class="chip">GitHub CLI</span><span class="chip">CI</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte-GitHub" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>xHTML-o-MATIC</h3>
+				<p>Small PHP framework oriented to structured web frontends.</p>
+				<p class="tech"><span class="chip">PHP</span></p>
+				<p class="project-links">
+					<a href="https://dev.stormbyte.org/xHTML-o-MATIC" target="_blank" rel="noopener">Documentation</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormCache</h3>
+				<p>Helpers on top of PECL Memcached for richer cache handling in PHP applications.</p>
+				<p class="tech"><span class="chip">PHP</span><span class="chip">Memcached</span></p>
+				<p class="project-links">
+					<a href="https://dev.stormbyte.org/StormCache" target="_blank" rel="noopener">Documentation</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>PostgreSQLDBC</h3>
+				<p>PHP library focused on PostgreSQL connections and prepared statements.</p>
+				<p class="tech"><span class="chip">PHP</span><span class="chip">PostgreSQL</span></p>
+				<p class="project-links">
+					<a href="https://dev.stormbyte.org/PostgreSQLDBC" target="_blank" rel="noopener">Documentation</a>
+				</p>
+			</div>
+		</section>
+
+		<section id="education" class="education hover-effect">
+			<h2>Education</h2>
+			<ul>
+				<li>Computer Science Engineering — Universidad de Alicante</li>
+				<li>Continuous self-directed learning (languages, build systems, packaging)</li>
+			</ul>
+		</section>
+
+		<section id="contact" class="contact hover-effect">
+			<h2>Contact</h2>
+			<p>Email: <a id="contact-email" href="#">…</a></p>
+			<p>
+				<a href="https://www.linkedin.com/in/stormbyte/" target="_blank" rel="noopener">LinkedIn</a> ·
+				<a href="https://github.com/StormBytePP/" target="_blank" rel="noopener">GitHub</a> ·
+				<a href="https://blog.stormbyte.org/" target="_blank" rel="noopener">Blog</a>
+			</p>
+		</section>
+
+		<section id="gpg-key" class="gpg-key hover-effect">
+			<h2>GPG Key</h2>
+			<p>Download or inspect my public key to send encrypted mail or verify signatures.</p>
+			<p class="gpg-actions">
+				<a class="gpg-download" href="StormByte.asc" download="StormByte.asc">Download StormByte.asc</a>
+				<button type="button" id="gpg-toggle" class="gpg-toggle">Show key</button>
+			</p>
+			<pre id="gpg-block" class="gpg-block" hidden></pre>
+		</section>
+	</main>
+
+	<div id="sys-terminal" class="sys-terminal" hidden>
+		<div class="sys-terminal-inner" role="dialog" aria-label="System terminal">
+			<div class="sys-terminal-header">
+				<span id="sys-terminal-title">tty1</span>
+				<button type="button" id="sys-terminal-close" class="sys-terminal-close" aria-label="Close">×</button>
+			</div>
+			<pre id="sys-terminal-log" class="sys-terminal-log" aria-live="polite"></pre>
+			<div class="sys-terminal-input-row" id="sys-terminal-input-row" hidden>
+				<span class="sys-prompt">stormbyte@identity:~$</span>
+				<input type="text" id="sys-terminal-input" class="sys-terminal-input" autocomplete="off" spellcheck="false" aria-label="Shell input">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>© <span id="year"></span> David Carlos Manuelda. All rights reserved.</p>
+		<p>
+			<a href="https://www.linkedin.com/in/stormbyte/" target="_blank" rel="noopener">LinkedIn</a> |
+			<a href="https://github.com/StormBytePP/" target="_blank" rel="noopener">GitHub</a> |
+			<a href="https://blog.stormbyte.org/" target="_blank" rel="noopener">Blog</a>
+		</p>
+		<p class="sys-status" id="sys-status" aria-live="polite">uptime 00:00:00 · load ok</p>
+		<p class="footer-tty">
+			<button type="button" id="footer-tty" class="tty-hint" aria-label="Open terminal">stormbyte@identity:~$</button>
+		</p>
+	</footer>
+
+	<script src="js/loader.js"></script>
 </body>
 </html>

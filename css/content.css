@@ -1,0 +1,156 @@
+.hover-effect {
+	transition: background-color 0.25s ease;
+	border-radius: 10px;
+	padding: 0.35rem 0.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.hover-effect:hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.hover-effect:hover > h2 {
+	color: #00ced1;
+}
+
+.description {
+	font-size: 1.05rem;
+	text-align: justify;
+	color: #b8e0b8;
+}
+
+.description p {
+	margin: 0 0 0.85rem;
+}
+
+.description strong {
+	color: #00ff88;
+}
+
+.job {
+	margin-bottom: 1.1rem;
+}
+
+.job-date {
+	font-weight: 400;
+	color: #6a8a6a;
+	font-size: 0.88rem;
+	margin-left: 0.35rem;
+}
+
+.job ul,
+.education ul {
+	list-style: none;
+	padding: 0;
+	margin: 0.35rem 0 0;
+}
+
+.job li,
+.education li {
+	margin-bottom: 0.4rem;
+	padding-left: 1rem;
+	position: relative;
+	color: #b8e0b8;
+}
+
+.job li::before,
+.education li::before {
+	content: "▸";
+	position: absolute;
+	left: 0;
+	color: #00ced1;
+}
+
+.project {
+	margin-bottom: 1.15rem;
+	padding: 0.75rem 0.85rem;
+	border: 1px solid rgba(0, 255, 0, 0.18);
+	border-radius: 10px;
+	background: rgba(0, 12, 0, 0.35);
+}
+
+.project h3 {
+	margin-top: 0;
+}
+
+.project p {
+	margin: 0.4rem 0;
+	color: #b8e0b8;
+}
+
+.tech {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+}
+
+.chip {
+	display: inline-block;
+	padding: 0.15rem 0.5rem;
+	border-radius: 999px;
+	border: 1px solid rgba(0, 255, 0, 0.4);
+	font-family: "Orbitron", Courier, monospace;
+	font-size: 0.68rem;
+	color: #00ff88;
+	background: rgba(0, 40, 0, 0.4);
+}
+
+.project-links {
+	margin-top: 0.5rem !important;
+	font-size: 0.95rem;
+}
+
+.contact p,
+.gpg-key p {
+	margin: 0.4rem 0;
+	color: #b8e0b8;
+}
+
+.gpg-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	align-items: center;
+	margin: 0.75rem 0 !important;
+}
+
+.gpg-download,
+.gpg-toggle {
+	display: inline-block;
+	padding: 0.4rem 0.75rem;
+	border-radius: 6px;
+	border: 1px solid rgba(0, 255, 0, 0.45);
+	background: rgba(0, 20, 0, 0.7);
+	color: #00ff00;
+	font-family: "Orbitron", Courier, monospace;
+	font-size: 0.75rem;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.gpg-download:hover,
+.gpg-toggle:hover {
+	border-color: #00ced1;
+	color: #00ced1;
+}
+
+.gpg-block {
+	margin: 0.5rem 0 0;
+	padding: 0.85rem;
+	max-height: 16rem;
+	overflow: auto;
+	background: #050805;
+	border: 1px solid rgba(0, 255, 0, 0.25);
+	border-radius: 8px;
+	color: #8fdf8f;
+	font-size: 0.72rem;
+	line-height: 1.35;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+@media (max-width: 768px) {
+	.description {
+		text-align: left;
+	}
+}
