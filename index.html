@@ -11,7 +11,7 @@
 	<meta property="og:image" content="https://dev.stormbyte.org/dcm-photo.png">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="David Carlos Manuelda — StormByte">
-	<meta name="twitter:description" content="Senior systems & C++ developer. C++23, Gentoo, build systems.">
+	<meta name="twitter:description" content="Senior systems & C++ developer. C++26, Gentoo, build systems.">
 	<title>David Carlos Manuelda — Portfolio</title>
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -56,8 +56,8 @@
 				<li class="dropdown">
 					<a href="#github-projects" class="dropbtn">Docs ▾</a>
 					<div class="dropdown-content">
-						<a href="https://dev.stormbyte.org/StormByte" target="_blank" rel="noopener">StormByte C++</a>
-						<a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank" rel="noopener">Build Master</a>
+						<a href="https://suite.stormbyte.org/StormByte/" target="_blank" rel="noopener">StormByte C++</a>
+						<a href="https://suite.stormbyte.org/StormByte-BuildMaster/" target="_blank" rel="noopener">Build Master</a>
 						<a href="https://github.com/StormBytePP/StormByte-StageManager" target="_blank" rel="noopener">StageManager</a>
 						<a href="https://github.com/StormBytePP/StormByte-GitHub" target="_blank" rel="noopener">StormByte-GitHub</a>
 						<a href="https://dev.stormbyte.org/xHTML-o-MATIC" target="_blank" rel="noopener">xHTML-o-MATIC</a>
@@ -139,7 +139,7 @@
 			<h2>About Me</h2>
 			<div class="description">
 				<p>
-					I build <strong>cross-platform C++23 libraries</strong> and the tooling around them:
+					I build <strong>cross-platform C++26 libraries</strong> and the tooling around them:
 					reproducible builds, Gentoo stage workflows, and CLIs that connect GitHub, CI caches, and local development.
 					Deep in Linux—especially <strong>Gentoo</strong>—packaging, and making complex dependency graphs compile on Windows as well.
 				</p>
@@ -163,7 +163,7 @@
 			<article class="job">
 				<h3>Open source · StormByte <span class="job-date">Ongoing</span></h3>
 				<ul>
-					<li>C++23 modular suite (buffer, config, crypto, database, logger, multimedia, …).</li>
+					<li>C++26 modular suite (buffer, config, crypto, database, logger, multimedia, …).</li>
 					<li>CMake Build Master DSL for static/plugin toolchains and external project graphs.</li>
 					<li>Gentoo StageManager and StormByte-GitHub CLIs: chroots, shared compiler caches, CI helpers.</li>
 				</ul>
@@ -174,11 +174,11 @@
 			<h2>Selected projects</h2>
 			<div class="project">
 				<h3>StormByte C++ Suite</h3>
-				<p>Cross-platform C++23 libraries for systems work: buffers and pipelines, config, crypto, multi-backend database, logging, multimedia foundations.</p>
-				<p class="tech"><span class="chip">C++23</span><span class="chip">CMake</span><span class="chip">LGPL</span></p>
+				<p>Cross-platform C++26 foundation and libraries for systems work: buffers and pipelines, config, crypto, networking, databases, logging, and multimedia.</p>
+				<p class="tech"><span class="chip">C++26</span><span class="chip">CMake</span><span class="chip">Linux · Windows · macOS</span></p>
 				<p class="project-links">
-					<a href="https://dev.stormbyte.org/StormByte" target="_blank" rel="noopener">Documentation</a> ·
-					<a href="https://github.com/StormBytePP/StormByte" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://suite.stormbyte.org/StormByte/" target="_blank" rel="noopener">Suite documentation</a> ·
+					<a href="https://github.com/StormByte-Suite/StormByte" target="_blank" rel="noopener">GitHub</a>
 				</p>
 			</div>
 			<div class="project">
@@ -186,13 +186,13 @@
 				<p>CMake DSL to configure, build, install and wire external projects (including Meson-backed deps), with fail-fast orchestration and cached downloads.</p>
 				<p class="tech"><span class="chip">CMake</span><span class="chip">Ninja</span><span class="chip">Meson</span></p>
 				<p class="project-links">
-					<a href="https://dev.stormbyte.org/StormByte-BuildMaster" target="_blank" rel="noopener">Documentation</a> ·
-					<a href="https://github.com/StormBytePP/StormByte-BuildMaster" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://suite.stormbyte.org/StormByte-BuildMaster/" target="_blank" rel="noopener">Suite documentation</a> ·
+					<a href="https://github.com/StormByte-Suite/StormByte-BuildMaster" target="_blank" rel="noopener">GitHub</a>
 				</p>
 			</div>
 			<div class="project">
 				<h3>StormByte-StageManager</h3>
-				<p>Gentoo stage tarball manager: extract, zram/tmpfs, bind mounts, chroot, optional save; shared ccache/sccache FILE workspaces with last-session pack.</p>
+				<p>CLI for Gentoo stage tarballs: browse, enter and rebase stages, download stage3 images, and convert or export archives; supports shared ccache/sccache workspaces.</p>
 				<p class="tech"><span class="chip">Bash</span><span class="chip">Gentoo</span><span class="chip">zram</span></p>
 				<p class="project-links">
 					<a href="https://github.com/StormBytePP/StormByte-StageManager" target="_blank" rel="noopener">GitHub</a>
@@ -200,10 +200,58 @@
 			</div>
 			<div class="project">
 				<h3>StormByte-GitHub</h3>
-				<p>Unified CLI for GitHub Actions caches, CI runs, git/submodule workflows, repo dumps and releases.</p>
+				<p>Unified Bash CLI for GitHub Actions caches and CI, Git and pin-aware submodules, repository inventory and releases, plus local search and test helpers.</p>
 				<p class="tech"><span class="chip">Bash</span><span class="chip">GitHub CLI</span><span class="chip">CI</span></p>
 				<p class="project-links">
 					<a href="https://github.com/StormBytePP/StormByte-GitHub" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>GitHubActions</h3>
+				<p>Composite GitHub Actions and reusable workflows for StormByte project CI, including toolchain setup, package caching, and documentation builds.</p>
+				<p class="tech"><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span><span class="chip">YAML</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/GitHubActions" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte.Repository</h3>
+				<p>Gentoo overlay with ebuilds for StormByte software and other useful packages.</p>
+				<p class="tech"><span class="chip">Gentoo</span><span class="chip">Portage</span><span class="chip">Shell</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte.Repository" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte.Repository.Patches</h3>
+				<p>Maintained Gentoo package patches, including fixes that enable selected packages to build with Clang.</p>
+				<p class="tech"><span class="chip">Gentoo</span><span class="chip">Clang</span><span class="chip">Patches</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte.Repository.Patches" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>VideoConvert</h3>
+				<p>Configurable C++ daemon that queues video files and converts them with FFmpeg into formats suited for long-term storage.</p>
+				<p class="tech"><span class="chip">C++20</span><span class="chip">FFmpeg</span><span class="chip">CMake</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/VideoConvert" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte-StageManager-Qt</h3>
+				<p>Qt desktop application for managing Gentoo stage tarballs, an earlier graphical counterpart to the StageManager CLI.</p>
+				<p class="tech"><span class="chip">C++</span><span class="chip">Qt</span><span class="chip">Gentoo</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte-StageManager-Qt" target="_blank" rel="noopener">GitHub</a>
+				</p>
+			</div>
+			<div class="project">
+				<h3>StormByte-makekernel</h3>
+				<p>Small Bash wrapper that simplifies running Gentoo's genkernel.</p>
+				<p class="tech"><span class="chip">Bash</span><span class="chip">Gentoo</span><span class="chip">genkernel</span></p>
+				<p class="project-links">
+					<a href="https://github.com/StormBytePP/StormByte-makekernel" target="_blank" rel="noopener">GitHub</a>
 				</p>
 			</div>
 			<div class="project">

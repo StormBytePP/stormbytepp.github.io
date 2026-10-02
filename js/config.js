@@ -61,7 +61,7 @@ const SKILL_RADAR = {
 };
 
 const SKILL_CHIPS = [
-	{ id: "hub", label: "C++23", icon: "C++", hub: true, x: 50, y: 50 },
+	{ id: "hub", label: "C++26", icon: "C++", hub: true, x: 50, y: 50 },
 	{ id: "tl", label: "Bash", icon: ">_", x: 18, y: 18 },
 	{ id: "tr", label: "CMake", icon: "</>", x: 82, y: 18 },
 	{ id: "ml", label: "PostgreSQL", icon: "PG", x: 14, y: 50 },
