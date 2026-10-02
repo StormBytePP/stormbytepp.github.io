@@ -4,14 +4,8 @@ function boot() {
 	initTypewriter();
 	initNav();
 	initMailLinks();
-	initMatrix();
 	initGpg();
 	initIdentity();
-	if (typeof initShell === "function") {
-		initShell();
-	} else {
-		console.error("initShell is not defined — check js/shell/init.js");
-	}
 	initSysStatus();
 	initVisibilityPause();
 }

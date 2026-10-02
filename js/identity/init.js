@@ -15,9 +15,6 @@ function initIdentity() {
 	if (typeof initWave === "function") {
 		initWave(reduced);
 	}
-	if (typeof initPanic === "function") {
-		initPanic();
-	}
 }
 
 window.addEventListener("resize", function () {

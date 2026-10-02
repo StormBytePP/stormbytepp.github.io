@@ -23,6 +23,22 @@
 	<link rel="stylesheet" href="css/identity/scope.css">
 	<link rel="stylesheet" href="css/content.css">
 	<link rel="icon" type="image/png" href="favicon.png">
+	<script defer src="js/config.js"></script>
+	<script defer src="js/matrix.js"></script>
+	<script defer src="js/identity/bcd.js"></script>
+	<script defer src="js/identity/radar.js"></script>
+	<script defer src="js/identity/chips.js"></script>
+	<script defer src="js/identity/circuit.js"></script>
+	<script defer src="js/identity/wave.js"></script>
+	<script defer src="js/identity/panic.js"></script>
+	<script defer src="js/identity/init.js"></script>
+	<script defer src="js/ui.js"></script>
+	<script defer src="js/main.js"></script>
+	<script defer src="js/shell/terminal.js"></script>
+	<script defer src="js/shell/emerge.js"></script>
+	<script defer src="js/shell/commands.js"></script>
+	<script defer src="js/shell/access.js"></script>
+	<script defer src="js/shell/init.js"></script>
 </head>
 <body>
 	<canvas id="matrix" aria-hidden="true"></canvas>
@@ -57,7 +73,10 @@
 	<main class="container">
 		<section id="identity" class="identity" aria-label="Identity">
 			<div class="identity-top">
-				<img src="dcm-photo.png" alt="David Carlos Manuelda" class="profile-photo" id="profile-photo" width="150" height="150">
+				<picture>
+					<source srcset="dcm-photo.webp" type="image/webp">
+					<img src="dcm-photo.png" alt="David Carlos Manuelda" class="profile-photo" id="profile-photo" width="150" height="150" fetchpriority="high">
+				</picture>
 				<h1 class="name typewriter">David Carlos Manuelda</h1>
 				<p class="tagline">Senior systems &amp; C++ developer · StormByte</p>
 				<p class="birth-date">Born: April 23, 1984 (Age: <span id="age"></span>)</p>
@@ -269,6 +288,5 @@
 		</p>
 	</footer>
 
-	<script src="js/loader.js"></script>
 </body>
 </html>

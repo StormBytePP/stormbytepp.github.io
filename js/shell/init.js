@@ -23,3 +23,6 @@ function initShell() {
 		initShellIdle();
 	}
 }
+
+initShell();
+initPanic();

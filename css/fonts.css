@@ -3,33 +3,38 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("../fonts/Orbitron-Regular.ttf") format("truetype");
+	src: url("../fonts/Orbitron-Regular.woff2") format("woff2"),
+		url("../fonts/Orbitron-Regular.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Orbitron";
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url("../fonts/Orbitron-Bold.ttf") format("truetype");
+	src: url("../fonts/Orbitron-Bold.woff2") format("woff2"),
+		url("../fonts/Orbitron-Bold.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+	src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+		url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+	src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+		url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Share Tech Mono";
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("../fonts/ShareTechMono-Regular.ttf") format("truetype");
+	src: url("../fonts/ShareTechMono-Regular.woff2") format("woff2"),
+		url("../fonts/ShareTechMono-Regular.ttf") format("truetype");
 }

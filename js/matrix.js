@@ -29,7 +29,7 @@ function initMatrix() {
 		canvas.height = height;
 		columns = Math.floor(width / MATRIX.fontSize);
 		drops = Array.from({ length: columns }, function () {
-			return Math.random() * height;
+			return Math.random() * (height / MATRIX.fontSize);
 		});
 	}
 
@@ -60,6 +60,7 @@ function initMatrix() {
 		if (!userEnabled || document.hidden) {
 			return;
 		}
+		draw();
 		const ms = chaos ? MATRIX.chaosIntervalMs : MATRIX.intervalMs;
 		timer = setInterval(draw, ms);
 	}
@@ -130,3 +131,5 @@ function initMatrix() {
 		});
 	}
 }
+
+initMatrix();
